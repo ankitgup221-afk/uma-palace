@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMA PALACE | Marriage Hall</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f7f5;
+color:#333;
+}
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('images/hero.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+header h1{
+font-size:70px;
+letter-spacing:3px;
+}
+
+header p{
+font-size:22px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#d4af37;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-size:18px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#b78b11;
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#6b4e00;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.about p{
+font-size:18px;
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card h3{
+margin:15px 0;
+color:#b8860b;
+}
+
+.pool{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.pool img{
+width:100%;
+border-radius:15px;
+}
+
+.contact{
+background:#222;
+color:white;
+text-align:center;
+}
+
+.contact h2{
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin:10px;
+}
+
+footer{
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.about,
+.pool{
+grid-template-columns:1fr;
+}
+
+header h1{
+font-size:45px;
+}
+
+}
+
+#booking{
+padding:80px 10%;
+background:#fff;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,
+textarea{
+padding:15px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+padding:15px;
+background:#d4af37;
+color:white;
+border:none;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#b68d12;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div>
+
+<h1>UMA PALACE</h1>
+
+<p>Luxury Marriage Hall | Urdu Bazar, Ghazipur, Uttar Pradesh</p>
+
+<section id="booking">
+    <h2 class="title">Book Now</h2>
+
+    <form action="https://formsubmit.co/ankitgup221@gmail.com" method="POST">
+
+        <input type="text" name="Name" placeholder="Your Name" required>
+
+        <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+
+        <input type="date" name="Booking Date" required>
+
+        <textarea name="Message" placeholder="Any Special Requirements"></textarea>
+
+        <button type="submit">Submit Booking</button>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Booking Inquiry - UMA PALACE">
+        <input type="hidden" name="_next" value="thankyou.html">
+
+    </form>
+</section>
+
+<a href="#booking" class="btn">Book Now</a>
+
+</div>
+
+</header>
+
+<section>
+
+<h2 class="title">About UMA PALACE</h2>
+
+<div class="about">
+
+<img src="images/hall1.jpeg">
+
+<div>
+
+<p>
+
+Welcome to <b>UMA PALACE</b>, one of the finest marriage halls in
+<strong>Urdu Bazar, Ghazipur, Uttar Pradesh.</strong>
+
+We provide a luxurious venue for weddings, engagements, receptions,
+birthday parties, anniversaries, corporate events and family celebrations.
+
+Our elegant interiors, spacious banquet area, premium guest rooms,
+modern décor and dedicated hospitality ensure every celebration becomes
+a memorable experience.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/room1.jpeg">
+<img src="images/room2.jpeg">
+<img src="images/room3.jpeg">
+<img src="images/room4.jpeg">
+<img src="images/hall1.jpeg">
+<img src="images/hall2.jpeg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Why Choose UMA PALACE?</h2>
+
+<div class="features">
+
+<div class="card">
+
+<h3>Luxury Rooms</h3>
+
+<p>Beautifully designed modern rooms with premium interiors.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Spacious Banquet Hall</h3>
+
+<p>Perfect for weddings, receptions, parties and social events.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Premium Decoration</h3>
+
+<p>Elegant ambience with stylish lighting and décor.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Prime Location</h3>
+
+<p>Located at Urdu Bazar, Ghazipur, Uttar Pradesh.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Swimming Pool</h2>
+
+<div class="pool">
+
+<img src="images/pool.jpeg">
+
+<div>
+
+<h2>Relax & Enjoy</h2>
+
+<p>
+
+UMA PALACE also features a beautiful swimming pool where guests can relax,
+take memorable photographs and enjoy private celebrations.
+
+It adds a luxurious touch to your wedding and event experience.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="location" style="padding:80px 8%; background:#f8f8f8;">
+
+
+<h2 class="title">📍 Visit UMA PALACE</h2>
+
+<p style="text-align:center;font-size:18px;margin-bottom:30px;">
+UMA PALACE<br>
+Urdu Bazar, Ghazipur, Uttar Pradesh
+</p>
+
+<div style="max-width:1100px;margin:auto;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2);">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.3817076992796!2d83.59327688021166!3d25.592229419337684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399201de4903c7eb%3A0xffea88bb377e4a42!2sUMA%20PALACE!5e0!3m2!1sen!2sin!4v1784924740091!5m2!1sen!2sin"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+
+<p><strong>📍 Address:</strong> Urdu Bazar, Ghazipur, Uttar Pradesh</p>
+
+<p><strong>📞 Phone:</strong>
+<a href="tel:9278342223">9278342223</a>
+</p>
+
+<p><strong>📷 Instagram:</strong>
+<a href="https://instagram.com/uma.palace" target="_blank">
+@uma.palace
+</a>
+</p>
+
+</div>
+
+</section>
+<footer>
+
+© 2026 UMA PALACE | All Rights Reserved
+
+</footer>
+
+</body>
+</html>
