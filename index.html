@@ -1,380 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UMA PALACE | Marriage Hall</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>UMA PALACE | Luxury Marriage Hall</title>
 
-<style>
+<meta name="description" content="Luxury Marriage Hall in Ghazipur">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-background:#f8f7f5;
-color:#333;
-}
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-header{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('images/hero.jpeg');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-}
+<link rel="stylesheet" href="style.css">
 
-header h1{
-font-size:70px;
-letter-spacing:3px;
-}
-
-header p{
-font-size:22px;
-margin-top:15px;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#d4af37;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-size:18px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#b78b11;
-}
-
-section{
-padding:80px 8%;
-}
-
-.title{
-text-align:center;
-font-size:40px;
-margin-bottom:40px;
-color:#6b4e00;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:15px;
-}
-
-.about p{
-font-size:18px;
-line-height:1.8;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
-transition:.4s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-text-align:center;
-}
-
-.card h3{
-margin:15px 0;
-color:#b8860b;
-}
-
-.pool{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.pool img{
-width:100%;
-border-radius:15px;
-}
-
-.contact{
-background:#222;
-color:white;
-text-align:center;
-}
-
-.contact h2{
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.contact p{
-font-size:18px;
-margin:10px;
-}
-
-footer{
-background:#111;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-@media(max-width:768px){
-
-.about,
-.pool{
-grid-template-columns:1fr;
-}
-
-header h1{
-font-size:45px;
-}
-
-}
-
-#booking{
-padding:80px 10%;
-background:#fff;
-}
-
-form{
-max-width:700px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-input,
-textarea{
-padding:15px;
-font-size:16px;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
-button{
-padding:15px;
-background:#d4af37;
-color:white;
-border:none;
-font-size:18px;
-border-radius:8px;
-cursor:pointer;
-}
-
-button:hover{
-background:#b68d12;
-}
-
-/* Booking Popup */
-
-.modal{
-display:none;
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.7);
-z-index:9999;
-}
-
-.modal-content{
-background:#fff;
-width:90%;
-max-width:500px;
-margin:5% auto;
-padding:30px;
-border-radius:15px;
-position:relative;
-animation:popup .3s ease;
-}
-
-@keyframes popup{
-from{
-transform:scale(.8);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
-}
-
-.close{
-position:absolute;
-top:15px;
-right:20px;
-font-size:30px;
-cursor:pointer;
-}
-
-.modal input,
-.modal textarea{
-width:100%;
-padding:14px;
-margin:12px 0;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
-.modal button{
-width:100%;
-padding:15px;
-background:#d4af37;
-color:#fff;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-}
-
-</style>
 </head>
 
 <body>
 
-<header>
+<!-- ========================= -->
+<!-- LOADER -->
+<!-- ========================= -->
 
-<div>
+<div id="loader">
+
+<div class="loader-content">
 
 <h1>UMA PALACE</h1>
 
-<p>Luxury Marriage Hall | Urdu Bazar, Ghazipur, Uttar Pradesh</p>
+<div class="gold-divider"></div>
 
+<p>Luxury Marriage Hall</p>
 
+<div class="loading-bar">
 
-<button class="btn" onclick="openBooking()">Send Booking Enquiry</button>
+<span></span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav id="navbar">
+
+<div class="logo">
+
+UMA PALACE
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#amenities">Amenities</a></li>
+
+<li><a href="#location">Location</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="menu-btn">
+
+☰
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<header id="home">
+
+<div class="slider">
+
+<div class="slide active">
+
+<img src="images/hero.jpeg">
+
+</div>
+
+<div class="slide">
+
+<img src="images/hall1.jpeg">
+
+</div>
+
+<div class="slide">
+
+<img src="images/hall2.jpeg">
+
+</div>
+
+<div class="slide">
+
+<img src="images/room1.jpeg">
+
+</div>
+
+<div class="slide">
+
+<img src="images/pool.jpeg">
+
+</div>
+
+</div>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h3>
+
+WELCOME TO
+
+</h3>
+
+<h1>
+
+UMA PALACE
+
+</h1>
+
+<p>
+
+Luxury Marriage Hall & Event Venue
+
+<br>
+
+Urdu Bazar • Ghazipur • Uttar Pradesh
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn"
+onclick="openBooking()">
+
+Send Booking Enquiry
+
+</button>
+
+<a href="#gallery" class="secondary-btn">
+
+Explore Gallery
+
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll-down">
+
+<span></span>
 
 </div>
 
 </header>
 
-<section>
+<!-- ========================= -->
+<!-- ABOUT -->
+<!-- ========================= -->
 
-<h2 class="title">About UMA PALACE</h2>
+<section id="about">
 
-<div class="about">
+<div class="container">
+
+<div class="section-heading">
+
+<h5>
+
+ABOUT UMA PALACE
+
+</h5>
+
+<h2>
+
+Experience Luxury Like Never Before
+
+</h2>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-image">
 
 <img src="images/logo.jpeg">
 
-<div>
+</div>
+
+<div class="about-text">
 
 <p>
 
-Welcome to <b>UMA PALACE</b>, one of the finest marriage halls in
-<strong>Urdu Bazar, Ghazipur, Uttar Pradesh.</strong>
+Welcome to UMA PALACE, one of the finest wedding destinations in Ghazipur.
 
-We provide a luxurious venue for weddings, engagements, receptions,
-birthday parties, anniversaries, corporate events and family celebrations.
-
-Our elegant interiors, spacious banquet area, premium guest rooms,
-modern décor and dedicated hospitality ensure every celebration becomes
-a memorable experience.
+Our luxurious interiors, premium rooms, elegant decorations and swimming pool make every celebration unforgettable.
 
 </p>
 
+<ul>
+
+<li>✔ Premium Wedding Venue</li>
+
+<li>✔ Luxury Guest Rooms</li>
+
+<li>✔ Swimming Pool</li>
+
+<li>✔ Spacious Parking</li>
+
+<li>✔ Elegant Decorations</li>
+
+</ul>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- ========================= -->
+<!-- STATISTICS -->
+<!-- ========================= -->
 
-<h2 class="title">Gallery</h2>
+<section class="stats">
 
-<div class="gallery">
+<div class="container">
 
-<img src="images/room1.jpeg">
-<img src="images/room2.jpeg">
-<img src="images/room3.jpeg">
-<img src="images/room4.jpeg">
-<img src="images/hall1.jpeg">
-<img src="images/hall2.jpeg">
+<div class="stat-card">
+
+<h2 class="counter" data-target="500">0</h2>
+
+<p>Successful Events</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="1000">0</h2>
+
+<p>Guests Capacity</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="12">0</h2>
+
+<p>Luxury Rooms</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>★★★★★</h2>
+
+<p>Guest Experience</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section>
+<!-- ========================= -->
+<!-- AMENITIES -->
+<!-- ========================= -->
 
-<h2 class="title">Why Choose UMA PALACE?</h2>
+<section id="amenities">
 
-<div class="features">
+<div class="container">
 
-<div class="card">
+<div class="section-heading">
+
+<h5>OUR AMENITIES</h5>
+
+<h2>Everything You Need For A Perfect Celebration</h2>
+
+</div>
+
+<div class="amenities-grid">
+
+<div class="amenity-card">
+
+<div class="icon">🏊</div>
+
+<h3>Swimming Pool</h3>
+
+<p>Luxury pool for memorable celebrations and photography.</p>
+
+</div>
+
+<div class="amenity-card">
+
+<div class="icon">🛏</div>
 
 <h3>Luxury Rooms</h3>
 
-<p>Beautifully designed modern rooms with premium interiors.</p>
+<p>Comfortable premium rooms for family and guests.</p>
 
 </div>
 
-<div class="card">
+<div class="amenity-card">
 
-<h3>Spacious Banquet Hall</h3>
+<div class="icon">💒</div>
 
-<p>Perfect for weddings, receptions, parties and social events.</p>
+<h3>Wedding Hall</h3>
 
-</div>
-
-<div class="card">
-
-<h3>Premium Decoration</h3>
-
-<p>Elegant ambience with stylish lighting and décor.</p>
+<p>Elegant banquet hall for weddings and receptions.</p>
 
 </div>
 
-<div class="card">
+<div class="amenity-card">
 
-<h3>Prime Location</h3>
+<div class="icon">🚗</div>
 
-<p>Located at Urdu Bazar, Ghazipur, Uttar Pradesh.</p>
+<h3>Parking</h3>
+
+<p>Spacious parking area for all your guests.</p>
+
+</div>
+
+<div class="amenity-card">
+
+<div class="icon">❄</div>
+
+<h3>Air Conditioned</h3>
+
+<p>Comfortable environment throughout every season.</p>
+
+</div>
+
+<div class="amenity-card">
+
+<div class="icon">📸</div>
+
+<h3>Photography</h3>
+
+<p>Beautiful interiors perfect for wedding photography.</p>
+
+</div>
 
 </div>
 
@@ -382,26 +366,128 @@ a memorable experience.
 
 </section>
 
-<section>
+<!-- ========================= -->
+<!-- ROOMS -->
+<!-- ========================= -->
 
-<h2 class="title">Swimming Pool</h2>
+<section id="rooms">
 
-<div class="pool">
+<div class="container">
 
-<img src="images/pool.jpeg">
+<div class="section-heading">
 
-<div>
+<h5>PREMIUM ROOMS</h5>
 
-<h2>Relax & Enjoy</h2>
+<h2>Luxury Stay For Your Guests</h2>
+
+<div class="gold-divider"></div>
+
+</div>
+
+<div class="rooms-grid">
+
+<div class="room-card">
+
+<img src="images/room1.jpeg">
+
+<div class="room-content">
+
+<h3>Deluxe Room</h3>
+
+<p>Elegant interiors with premium comfort.</p>
+
+</div>
+
+</div>
+
+<div class="room-card">
+
+<img src="images/room2.jpeg">
+
+<div class="room-content">
+
+<h3>Premium Suite</h3>
+
+<p>Designed specially for wedding families.</p>
+
+</div>
+
+</div>
+
+<div class="room-card">
+
+<img src="images/room3.jpeg">
+
+<div class="room-content">
+
+<h3>Executive Room</h3>
+
+<p>Luxury accommodation for memorable stays.</p>
+
+</div>
+
+</div>
+
+<div class="room-card">
+
+<img src="images/room4.jpeg">
+
+<div class="room-content">
+
+<h3>Family Room</h3>
+
+<p>Comfortable and spacious for your loved ones.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SWIMMING POOL -->
+<!-- ========================= -->
+
+<section id="pool">
+
+<div class="pool-grid">
+
+    <div class="pool-image">
+
+        <img src="images/pool.jpeg">
+
+    </div>
+
+<div class="pool-content">
+
+<h5>LUXURY EXPERIENCE</h5>
+
+<h2>Beautiful Swimming Pool</h2>
+
+<div class="gold-divider"></div>
 
 <p>
 
-UMA PALACE also features a beautiful swimming pool where guests can relax,
-take memorable photographs and enjoy private celebrations.
-
-It adds a luxurious touch to your wedding and event experience.
+Relax and refresh with our beautifully maintained swimming pool.
+Perfect for photography, pre-wedding shoots and family gatherings.
 
 </p>
+
+<ul>
+
+<li>✔ Luxury Pool Area</li>
+
+<li>✔ Family Friendly</li>
+
+<li>✔ Perfect for Photoshoots</li>
+
+<li>✔ Clean & Well Maintained</li>
+
+</ul>
 
 </div>
 
@@ -409,79 +495,381 @@ It adds a luxurious touch to your wedding and event experience.
 
 </section>
 
-<section id="location" style="padding:80px 8%; background:#f8f8f8;">
+<!-- ========================= -->
+<!-- GALLERY -->
+<!-- ========================= -->
 
+<section id="gallery">
 
-<h2 class="title">📍 Visit UMA PALACE</h2>
+<div class="container">
 
-<p style="text-align:center;font-size:18px;margin-bottom:30px;">
-UMA PALACE<br>
-Urdu Bazar, Ghazipur, Uttar Pradesh
-</p>
+<div class="section-heading">
 
-<div style="max-width:1100px;margin:auto;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2);">
+<h5>PHOTO GALLERY</h5>
 
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.3817076992796!2d83.59327688021166!3d25.592229419337684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399201de4903c7eb%3A0xffea88bb377e4a42!2sUMA%20PALACE!5e0!3m2!1sen!2sin!4v1784924740091!5m2!1sen!2sin"
-width="100%"
-height="450"
-style="border:0;"
-allowfullscreen=""
-loading="lazy"
-referrerpolicy="strict-origin-when-cross-origin">
-</iframe>
+<h2>Moments At UMA PALACE</h2>
+
+<div class="gold-divider"></div>
 
 </div>
 
-<div style="text-align:center;margin-top:30px;">
+<div class="gallery-grid">
 
-<p><strong>📍 Address:</strong> Urdu Bazar, Ghazipur, Uttar Pradesh</p>
+<div class="gallery-item large">
+<img src="images/hall1.jpeg">
+</div>
 
-<p><strong>📞 Phone:</strong>
-<a href="tel:9278342223">9278342223</a>
-</p>
+<div class="gallery-item">
+<img src="images/hall2.jpeg">
+</div>
 
-<p><strong>📷 Instagram:</strong>
-<a href="https://instagram.com/uma.palace" target="_blank">
-@uma.palace
+<div class="gallery-item">
+<img src="images/room1.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="images/room2.jpeg">
+</div>
+
+<div class="gallery-item large">
+<img src="images/pool.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="images/room3.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="images/room4.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="images/hero.jpeg">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- WEDDING PACKAGES -->
+<!-- ========================= -->
+
+<section id="packages">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h5>OUR PACKAGES</h5>
+
+<h2>Choose Your Perfect Celebration</h2>
+
+<div class="gold-divider"></div>
+
+<p>We offer customised wedding packages to suit every celebration.</p>
+
+</div>
+
+<div class="package-grid">
+
+<div class="package-card">
+
+<h3>Silver Package</h3>
+
+<h4>Perfect for Small Celebrations</h4>
+
+<ul>
+
+<li>✔ Beautiful Decoration</li>
+
+<li>✔ Spacious Hall</li>
+
+<li>✔ Guest Seating</li>
+
+<li>✔ Parking Facility</li>
+
+<li>✔ Basic Sound System</li>
+
+</ul>
+
+<a href="#" onclick="openBooking()" class="primary-btn">
+
+Enquire Now
+
 </a>
-</p>
+
+</div>
+
+<div class="package-card featured">
+
+<div class="popular">
+
+MOST POPULAR
+
+</div>
+
+<h3>Gold Package</h3>
+
+<h4>Most Booked Package</h4>
+
+<ul>
+
+<li>✔ Premium Decoration</li>
+
+<li>✔ Luxury Rooms</li>
+
+<li>✔ Swimming Pool Access</li>
+
+<li>✔ Premium Lighting</li>
+
+<li>✔ Photography Area</li>
+
+<li>✔ VIP Seating</li>
+
+</ul>
+
+<a href="#" onclick="openBooking()" class="primary-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+<div class="package-card">
+
+<h3>Royal Package</h3>
+
+<h4>Luxury Experience</h4>
+
+<ul>
+
+<li>✔ Everything in Gold</li>
+
+<li>✔ Premium Rooms</li>
+
+<li>✔ Luxury Decoration</li>
+
+<li>✔ VIP Lounge</li>
+
+<li>✔ Grand Entrance</li>
+
+<li>✔ Premium Hospitality</li>
+
+</ul>
+
+<a href="#" onclick="openBooking()" class="primary-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
-<footer>
 
-© 2026 UMA PALACE | All Rights Reserved
+<section id="events">
 
-</footer>
+<div class="container">
 
-<!-- Booking Popup -->
+<div class="section-heading">
+
+<h5>EVENTS</h5>
+
+<h2>Events We Host</h2>
+
+<div class="gold-divider"></div>
+
+</div>
+
+<div class="amenities-grid">
+
+<div class="amenity-card">
+
+<h3>💒 Wedding</h3>
+
+</div>
+
+<div class="amenity-card">
+
+<h3>🎉 Reception</h3>
+
+</div>
+
+<div class="amenity-card">
+
+<h3>🎂 Birthday Party</h3>
+
+</div>
+
+<div class="amenity-card">
+
+<h3>💍 Engagement</h3>
+
+</div>
+
+<div class="amenity-card">
+
+<h3>🏢 Corporate Events</h3>
+
+</div>
+
+<div class="amenity-card">
+
+<h3>🎊 Anniversary</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FLOATING BUTTONS -->
+<!-- ========================= -->
+
+<div class="floating-buttons">
+
+<a href="tel:7355523589" class="call-btn">
+📞
+</a>
+
+<a href="https://wa.me/917355523589"
+target="_blank"
+class="whatsapp-btn">
+💬
+</a>
+
+<a href="#" id="scrollTop">
+⬆
+</a>
+
+</div>
+
+<!-- ========================= -->
+<!-- BOOKING POPUP -->
+<!-- ========================= -->
 
 <div id="bookingModal" class="modal">
 
 <div class="modal-content">
 
-<span class="close" onclick="closeBooking()">&times;</span>
+<span class="close"
 
-<h2 style="text-align:center;margin-bottom:20px;">
-Book Your Event at UMA PALACE
+onclick="closeBooking()">
+
+&times;
+
+</span>
+
+<h2>
+
+Book Your Event
+
 </h2>
 
-<form action="https://formsubmit.co/ankitgup221@gmail.com" method="POST">
+<form action="https://formsubmit.co/ankitgup221@gmail.com"
 
-<input type="text" name="Name" placeholder="Your Name" required>
+method="POST">
 
-<input type="tel" name="Phone Number" placeholder="Phone Number" required>
+<input
 
-<input type="date" name="Booking Date" required>
+type="text"
 
-<textarea name="Message" placeholder="Any Special Requirements"></textarea>
+name="Name"
 
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Booking Inquiry - UMA PALACE">
+placeholder="Your Name"
 
-<button type="submit">Send Enquery</button>
+required>
+
+<input
+
+type="tel"
+
+name="Phone"
+
+placeholder="Phone Number"
+
+required>
+
+<input
+
+type="email"
+
+name="Email"
+
+placeholder="Email Address"
+
+required>
+
+<select name="Event Type">
+
+<option>Wedding</option>
+
+<option>Reception</option>
+
+<option>Birthday</option>
+
+<option>Engagement</option>
+
+<option>Corporate Event</option>
+
+</select>
+
+<input
+
+type="date"
+
+name="Booking Date"
+
+required>
+
+<input
+
+type="number"
+
+name="Guests"
+
+placeholder="Expected Guests">
+
+<textarea
+
+name="Message"
+
+placeholder="Special Requirements">
+
+</textarea>
+
+<input
+
+type="hidden"
+
+name="_captcha"
+
+value="false">
+
+<input
+
+type="hidden"
+
+name="_subject"
+
+value="New Booking Enquiry - UMA PALACE">
+
+<button type="submit">
+
+Send Booking Enquiry
+
+</button>
 
 </form>
 
@@ -489,24 +877,222 @@ Book Your Event at UMA PALACE
 
 </div>
 
-<script>
+<!-- ========================= -->
+<!-- TESTIMONIALS -->
+<!-- ========================= -->
 
-function openBooking(){
-document.getElementById("bookingModal").style.display="block";
-}
+<section id="testimonials">
 
-function closeBooking(){
-document.getElementById("bookingModal").style.display="none";
-}
+<div class="container">
 
-window.onclick=function(event){
-const modal=document.getElementById("bookingModal");
-if(event.target==modal){
-modal.style.display="none";
-}
-}
+<div class="section-heading">
 
-</script>
+<h5>TESTIMONIALS</h5>
+
+<h2>What Our Guests Say</h2>
+
+<div class="gold-divider"></div>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+"Amazing venue with beautiful interiors. Our wedding was perfectly organised and every guest loved the ambience."
+
+</p>
+
+<h4>- Happy Couple</h4>
+
+</div>
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+"Luxury rooms, elegant decoration and a clean swimming pool. Highly recommended for weddings and receptions."
+
+</p>
+
+<h4>- Family Event</h4>
+
+</div>
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+"Professional staff, spacious parking and a premium atmosphere. A wonderful experience."
+
+</p>
+
+<h4>- Guest Review</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- LOCATION -->
+<!-- ========================= -->
+
+<section id="location">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h5>VISIT US</h5>
+
+<h2>Find UMA PALACE</h2>
+
+<div class="gold-divider"></div>
+
+</div>
+
+<div class="location-grid">
+
+<div class="map">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.3817076992796!2d83.59327688021166!3d25.592229419337684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399201de4903c7eb%3A0xffea88bb377e4a42!2sUMA%20PALACE!5e0!3m2!1sen!2sin!4v1784924740091!5m2!1sen!2sin"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+<div class="location-info">
+
+<h3>UMA PALACE</h3>
+
+<p>📍 Urdu Bazar, Ghazipur, Uttar Pradesh</p>
+
+<p>📞 +91 7355523589</p>
+
+<p>
+    📷 Instagram:
+    <a href="https://instagram.com/uma.palace"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="insta-link">
+       @uma.palace
+    </a>
+</p>
+
+<a href="https://maps.google.com/?q=UMA+PALACE+Ghazipur"
+target="_blank"
+class="primary-btn">
+
+Get Directions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer id="contact">
+
+<div class="container footer-grid">
+
+<div>
+
+<h2>UMA PALACE</h2>
+
+<p>
+
+Luxury Marriage Hall in Urdu Bazar, Ghazipur.
+
+We create unforgettable weddings, receptions and celebrations.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#amenities">Amenities</a></li>
+
+<li><a href="#location">Location</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📍 Urdu Bazar, Ghazipur</p>
+
+<p>📞 +91 7355523589</p>
+
+<p>
+📷 Instagram:
+<a href="https://instagram.com/uma.palace"
+   target="_blank"
+   rel="noopener noreferrer">
+   @uma.palace
+</a>
+</p>
+
+<p>✉ Booking Available 24×7</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 UMA PALACE • All Rights Reserved
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
